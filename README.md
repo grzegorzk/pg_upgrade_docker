@@ -3,6 +3,17 @@ Run `pg_upgrade` in docker
 
 # how-to
 
+All you need:
+
+```bash
+make pg_upgrade POSTGRES_DATA=<path to postgres data directory> POSTGRES_OLD_VERSION=<upgrading from this version> POSTGRES_NEW_VERSION=<upgrading to this version>
+```
+
+Version of postgres data located in `path to postgres data directory` must match `POSTGRES_OLD_VERSION`. Data in this directory will not be modified.
+`db/data_migrated_${POSTGRES_NEW_VERSION}` will be created where migrated database will be stored.
+
+Below is the list of targets made available in the utility:
+
 ## List available options
 ```bash
 make list
