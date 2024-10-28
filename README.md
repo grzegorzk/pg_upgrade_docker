@@ -8,6 +8,8 @@ Run `pg_upgrade` in docker
 make list
 ```
 
+All commands below use [podman](https://podman.io/) as default containers management tool. If you prefer docker, add `DOCKER=docker` option to all commands listed below.
+
 ## Build image later used to run `pg_upgrade`
 ```bash
 make build_pg_upgrade_image POSTGRES_OLD_VERSION=<upgrading from this version> POSTGRES_NEW_VERSION=<upgrading to this version>
